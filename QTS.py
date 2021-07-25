@@ -83,7 +83,7 @@ def text_stats(input, lang):
     # gets dict -> {PoS:count}
     PoScounts = PoS_dist(tokensTOT, lang)
     # print
-    printall(sents, tokensTOT, vocab, content, funct, PoScounts)
+    printall(lang, sents, tokensTOT, vocab, content, funct, PoScounts)
 
 
 def main(argv):
