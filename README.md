@@ -8,13 +8,14 @@ QTS (Quick Text Stats) is a command line tool based on nltk that easily extracts
 ### Currently included features
 - Number of sentences and tokens
 - Token/sentence ratio
+- Number of characters (with and without whitespaces)
 - Number of tyoe words
 - Type/Token ratio
 - Number of content vs. functional words
 - Part-of-Speech distribution (e.g. number of NOUNs, VERBs, etc.)*
 - Part-os-Speech/sentence ratio (e.g. number of NOUNs per sentence)*
 
-*using universal tagset
+* english only (due to NLTK limitations). Using universal tagset.
 
 ### Usage
 <code>$python3 QTS.py -it your_raw_text.txt</code> # Italian
@@ -26,5 +27,4 @@ QTS (Quick Text Stats) is a command line tool based on nltk that easily extracts
 - Dependency relation/sentence ratio (e.g. number of OBJ relation per sentence)
 - Other tagsets for PoS-tagging (e.g. PennTreebank tagset)
 - Readability indexes 
-- Number of paragraphs(?) 
 - Number of paragraphs(?) 
