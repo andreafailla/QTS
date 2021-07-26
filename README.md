@@ -18,8 +18,8 @@ QTS (Quick Text Stats) is a command line tool based on nltk that easily extracts
 * english only (due to NLTK limitations). Using universal tagset.
 
 ### Usage
-<code>$python3 QTS.py -it your_raw_text.txt</code> # Italian
-<br><code>$python3 QTS.py -en your_raw_text.txt</code> # English
+<code>$python3 QTS.py it your_raw_text.txt</code> # Italian
+<br><code>$python3 QTS.py en your_raw_text.txt</code> # English
 
 ### Upcoming features
 - Extended language support (French, Spanish, Russian)
