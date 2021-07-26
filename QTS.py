@@ -55,17 +55,18 @@ def PoS_dist(tokensTOT, lang):
     return dict(counts)
 
 def printall(lang, text, sents, tokensTOT, nchars, vocab, content, funct, PoScounts):
+    percentage = lambda x: round(x/float(len(tokensTOT)), 3) * 100
     if lang=='english':
         print('Sentences:', len(sents), '\nTokens:', len(tokensTOT))
         print('Token/Sent ratio:', round(len(tokensTOT)/float(len(sents)), 3))
         print('Number of characters (whitespaces included):', len(text))
         print('Number of characters (whitespaces excluded):', nchars)
         print()
-        print('Type words:', len(vocab), '\nType/Token ratio:', round(len(vocab)/float(len(tokensTOT)), 3))
+        print('Type words:', len(vocab), '\nType/Token ratio:', percentage(len(vocab)))
         print('Content Words:', len(content), '\nFunction Words:', len(funct))
         print()
         for tag, v in dict(PoScounts).items():
-            print("N. of",tag + ":", v)
+            print("N. of",tag + ":", v, '(', percentage(v), '%)')
             print('Avg n. of', tag, 'per sentence:', round(v/float(len(sents)), 3))
         print()
     
@@ -75,7 +76,7 @@ def printall(lang, text, sents, tokensTOT, nchars, vocab, content, funct, PoScou
         print('Numero di caratteri (spazi esclusi):', nchars)
         print('Numero di caratteri (spazi inclusi):', len(text))
         print()
-        print('Vocabolario:', len(vocab), '\nType/Token ratio:', round(len(vocab)/float(len(tokensTOT)), 3))
+        print('Vocabolario:', len(vocab), '\nType/Token ratio:', percentage(len(vocab)))
         print('Parole contenuto:', len(content), '\nParole funzionali:', len(funct))
         print()
         print('Il PoS tagging in NLTK supporta solo inglese e russo :(')
